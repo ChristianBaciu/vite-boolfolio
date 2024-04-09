@@ -39,11 +39,18 @@ import axios from 'axios';
     <div class="container mt-3 d-flex justify-content-center">
 
         <div class="text-center">
-            <h1>PROJECTS</h1>
+            <h1>LIST</h1>
 
-            <p v-for="(element, index) in arrayProject" :key="element.id">
+            <!-- <p v-for="(element, index) in arrayProject" :key="element.id">
                 {{ element.titolo }}
+            </p> -->
+            
+            <p v-for="(element, index) in arrayProject" :key="element.id">
+                <router-link :to="{name: 'single-project', params: {titolo: element.titolo}}">
+                    {{ element.titolo }}
+                </router-link>
             </p>
+
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination">

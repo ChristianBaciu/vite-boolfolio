@@ -2,20 +2,20 @@
 import AppHeader from './components/AppHeader.vue'
 // import ProjectCars from './components/ProjectCars.vue'
 
-export default{
-    components:{
-        // ProjectCars
-        AppHeader,
-    },
-    data(){
-        return{
+    export default{
+        components:{
+            // ProjectCars
+            AppHeader,
+        },
+        data(){
+            return{
+            }
+        },
+        methods:{
+        },
+        mounted(){
         }
-    },
-    methods:{
-    },
-    mounted(){
     }
-}
 </script>
 
 <!-- ------------------------------------------------------------------- -->

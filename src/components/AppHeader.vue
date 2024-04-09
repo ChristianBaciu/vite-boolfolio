@@ -1,20 +1,20 @@
 <script>
 import {RouterLink} from 'vue-router';
 
-export default{
-    name: 'AppHeader',
-    components:{
+    export default{
+        name: 'AppHeader',
+        components:{
 
-    },
-    data(){
-        return{
+        },
+        data(){
+            return{
+            }
+        },
+        methods:{
+        },
+        mounted(){
         }
-    },
-    methods:{
-    },
-    mounted(){
     }
-}
 </script>
 
 <!-- ------------------------------------------------------------------- -->

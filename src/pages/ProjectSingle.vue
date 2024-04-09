@@ -1,7 +1,6 @@
 <script>
 
     export default{
-        name: 'HomePage',
         components:{
             
         },
@@ -19,7 +18,7 @@
 <!-- ------------------------------------------------------------------- -->
 
 <template>
-    <h1 class="text-center mt-3">HOME</h1>
+    <h1 class="text-center mt-3">PROJECTSINGLE</h1>
 </template>
 
 <!-- ------------------------------------------------------------------- -->
