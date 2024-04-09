@@ -57,6 +57,7 @@ import AppProject from '../components/AppProject.vue'
             <AppProject v-for="(projects, index) in arrayProject" :key="projects.id"
                 :titolo="projects.titolo"
                 :contenuto="projects.contenuto"
+                :cover_image="projects.cover_image "
 
                 :type="projects.type "
                 :technologies="projects.technologies "
