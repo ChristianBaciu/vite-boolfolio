@@ -55,11 +55,11 @@ import AppProject from '../components/AppProject.vue'
 
             <!-- ciclo del componente props AppProject-->
             <AppProject v-for="(element, index) in arrayProject" :key="element.id"
-                titolo="element.titolo"
-                contenuto="element.contenuto"
+                :titolo="element.titolo"
+                :contenuto="element.contenuto"
 
-                type="element.type ? element.type.nome : '' "
-                technologies="element.technologies ? element.technologies.name : '' "
+                :type="element.type ? element.type.nome : '' "
+                :technologies="element.technologies ? element.technologies.name : '' "
             />
 
 

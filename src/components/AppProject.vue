@@ -22,11 +22,19 @@
 
 <template>
 
-    <router-view>
+    <router-link :to="{name: 'single-project', params: {titolo: titolo}}">
 
-        <h3>ciaoooo</h3>
-        <p>ciao</p>
-    </router-view>
+        <div class="card my-4" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ titolo }}</h5>
+                <p class="card-text">{{ contenuto }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+    </router-link>
+
 
 
     <!-- 
