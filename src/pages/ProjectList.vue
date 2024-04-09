@@ -54,12 +54,12 @@ import AppProject from '../components/AppProject.vue'
 
 
             <!-- ciclo del componente props AppProject-->
-            <AppProject v-for="(element, index) in arrayProject" :key="element.id"
-                :titolo="element.titolo"
-                :contenuto="element.contenuto"
+            <AppProject v-for="(projects, index) in arrayProject" :key="projects.id"
+                :titolo="projects.titolo"
+                :contenuto="projects.contenuto"
 
-                :type="element.type ? element.type.nome : '' "
-                :technologies="element.technologies ? element.technologies.name : '' "
+                :type="projects.type "
+                :technologies="projects.technologies "
             />
 
 
@@ -70,7 +70,7 @@ import AppProject from '../components/AppProject.vue'
                     </li>
 
                     <li class="page-item" v-for="(element,index) in lastPage " :key="index">
-                        <button class="page-link" @click="getProjects(element )">{{element}}</button>
+                        <button class="page-link" @click="getProjects(element)">{{element}}</button>
                     </li>
 
                     <li class="page-item" :class="{'disabled': currentPage === lastPage} " >
