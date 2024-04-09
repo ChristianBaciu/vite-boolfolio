@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import HomePage from './pages/HomePage.vue'
 import ProjectList from './pages/ProjectList.vue'
 import ProjectSingle from './pages/ProjectSingle.vue'
+import NotFound from './pages/NotFound.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
             path: '/list/:titolo',
             name: 'single-project',
             component: ProjectSingle
+        },
+        {
+            path: "/:pathMatch(.*)*",
+            name: 'errore',
+            component: NotFound
         },
 
     ]

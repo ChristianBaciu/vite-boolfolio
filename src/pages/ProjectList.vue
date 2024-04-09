@@ -1,14 +1,15 @@
 <script>
 import axios from 'axios';
-// importazione
 import AppProject from '../components/AppProject.vue'
+import {store} from '../store.js'
 
 
     export default{
         name: 'ProjectList',
 
         components: {
-            AppProject
+            AppProject,
+            store
         },
         data(){
             return{
@@ -19,8 +20,8 @@ import AppProject from '../components/AppProject.vue'
         },
         methods:{
             getProjects(projectApiPages){
-
-                axios.get('http://127.0.0.1:8000/api/apiProjects', {
+                        // http://127.0.0.1:8000
+                axios.get(`${store.apiBaseUrl}/api/apiProjects`,{
                     params: {
                         page: projectApiPages // page preso dalla chiamata http://127.0.0.1:8000/api/apiProjects
                     }
