@@ -1,8 +1,15 @@
 <script>
 import axios from 'axios';
+// importazione
+import AppProject from '../components/AppProject.vue'
+
 
     export default{
         name: 'ProjectList',
+
+        components: {
+            AppProject
+        },
         data(){
             return{
                 arrayProject:[ ],
@@ -44,12 +51,16 @@ import axios from 'axios';
             <!-- <p v-for="(element, index) in arrayProject" :key="element.id">
                 {{ element.titolo }}
             </p> -->
-            
-            <p v-for="(element, index) in arrayProject" :key="element.id">
-                <router-link :to="{name: 'single-project', params: {titolo: element.titolo}}">
-                    {{ element.titolo }}
-                </router-link>
-            </p>
+
+
+            <!-- ciclo del componente props AppProject-->
+            <AppProject v-for="(element, index) in arrayProject" :key="element.id"
+                titolo="element.titolo"
+                contenuto="element.contenuto"
+
+                type="element.type ? element.type.nome : '' "
+                technologies="element.technologies ? element.technologies.name : '' "
+            />
 
 
             <nav aria-label="Page navigation example">
