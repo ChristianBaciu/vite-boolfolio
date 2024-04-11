@@ -43,6 +43,12 @@ import {RouterLink} from 'vue-router';
                             List
                         </router-link>
                     </li>
+                    
+                    <li>
+                        <router-link :to="{name: 'contact-us'}" class="nav-link">
+                            Contatti
+                        </router-link>
+                    </li>
 
                 </ul>
             </div>
